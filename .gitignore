@@ -1,8 +1,6 @@
-.env
-.env.local
 node_modules/
-dist/
 .next/
-.DS_Store
+out/
+.env*.local
 *.log
-.vite/
+.DS_Store

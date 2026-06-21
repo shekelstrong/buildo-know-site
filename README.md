@@ -1,79 +1,32 @@
-# Buildo База знаний — Сайт
+# Buildo Know
 
-> **AI-бот для поддержки клиентов и внутренних баз знаний**
+> AI-поиск по всем документам компании. Ответ за 3 секунды
 
-Часть экосистемы **Buildo** (https://buildo.ru). MIT licensed. Open source.
-
-![Buildo](https://img.shields.io/badge/Buildo-ecosystem-5B8DEF?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
-
----
+Один из 6 продуктов экосистемы **Buildo** — ИИ-агентов для бизнеса.
 
 ## Что это
 
-Маркетинговый сайт продукта База знаний. Лендинг + SEO блог + кейсы. Buildo.ru зонтик.
-
-**Сценарий использования (Сайт):** Лендинг с примерами, калькулятор, документация
-
----
-
-## Архитектура
-
-```
-Buildo База знаний экосистема
-├── shekelstrong/buildo-know-tg          ← этот репо (Telegram-бот)
-├── shekelstrong/buildo-know-miniapp    ← Mini App
-└── shekelstrong/buildo-know-site        ← Маркетинговый сайт
-```
-
----
+Корпоративная база знаний — это ai-поиск по всем документам компании. ответ за 3 секунды.
 
 ## Стек
 
-| Слой | Технология |
-|---|---|
-| Bot | aiogram 3.x + Redis FSM + Docker |
-| Frontend | Next.js 14 + Tailwind + shadcn/ui |
-| Backend | FastAPI + LangChain + pgvector + OpenRouter + ЮKassa |
-| AI (image) | не используется (embed text only) |
-| AI (text) | MiniMax M3 (основной), Kimi K2 (длинные контексты) |
-| Deploy | Layero / Vercel (manual deploy by user) |
+- **Next.js 14** + React 18
+- **TypeScript 5.7**
+- **Tailwind CSS 3.4**
+- **Brand color:** `#10B981`
 
----
+## Локальная разработка
 
-## Монетизация
-
-2990 ₽/мес (5 ботов) / 7990 ₽/мес (безлимит + RAG)
-
-**Целевая аудитория:** SMB, поддержка, продажи, обучение
-**Конкуренты (РФ):** Chatbase, Botpress (не в РФ), Carrot Quest, Envybox
-
----
+```bash
+npm install
+npm run dev
+# → http://localhost:3000
+```
 
 ## Деплой
 
-```bash
-cp .env.example .env
-# заполни: TELEGRAM_BOT_TOKEN, OPENROUTER_API_KEY, YOOKASSA_*
-docker compose up --build
-```
+Платформа: **Layero** (auto-deploy из main).
 
-Продакшен:
-```bash
-git push origin main  # GitHub Actions → SSH → VPS → docker compose up -d --build
-```
+## Лицензия
 
----
-
-## Связанные репо
-
-- [buildo-know-tg](https://github.com/shekelstrong/buildo-know-tg) — этот репо
-- [buildo-know-miniapp](https://github.com/shekelstrong/buildo-know-miniapp)
-- [buildo-know-site](https://github.com/shekelstrong/buildo-know-site)
-- [nemo-team-docs/projects/buildo/know/](https://github.com/shekelstrong/nemo-team-docs/tree/main/projects/buildo/know) — спецификация
-
----
-
-## License
-
-MIT (c) 2026 Buildo Ecosystem. Inspired by [awesome-generative-ai-apps](https://github.com/Anil-matcha/awesome-generative-ai-apps).
+MIT © 2026 Buildo

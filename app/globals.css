@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #10B981;
+  --color-primary-soft: #34D399;
+  --color-accent: #06B6D4;
+  --color-bg: #0A0E14;
+  --color-bg-surface: #11151D;
+  --color-bg-surface2: #1A1F2A;
+  --color-bg-border: #252B38;
+  --color-ink: #F8FAFC;
+  --color-ink-muted: #94A3B8;
+  --color-ink-dim: #64748B;
+}
+
+html, body { background: var(--color-bg); color: var(--color-ink); }
+
+@layer components {
+  .btn-primary {
+    @apply h-12 px-6 rounded-xl font-semibold text-white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    box-shadow: 0 8px 24px -8px var(--color-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -8px var(--color-primary); }
+  .card {
+    @apply rounded-2xl p-6 border border-bg-border;
+    background: linear-gradient(180deg, var(--color-bg-surface), var(--color-bg-surface2));
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover { border-color: var(--color-primary); transform: translateY(-4px); }
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

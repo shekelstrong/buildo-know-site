@@ -1,0 +1,8 @@
+{
+  "$schema": "https://layero.ru/schema/layero-v1.json",
+  "framework": "next",
+  "install": "npm install --legacy-peer-deps",
+  "build": "npm run build",
+  "output": ".next",
+  "node": "20"
+}
